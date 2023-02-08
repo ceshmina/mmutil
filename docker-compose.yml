@@ -4,7 +4,10 @@ services:
   python:
     build:
       context: .
+    environment:
+      - MUSIC_LIB=${MUSIC_LIB}
     volumes:
       - .:/project
+      - ${MUSIC_LIB}:/music
     working_dir: /project/python
     command: poetry run python main.py
