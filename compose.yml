@@ -1,0 +1,7 @@
+services:
+  rust:
+    image: rust:1.67
+    volumes:
+      - .:/work
+    working_dir: /work
+    command: sleep infinity
